@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixel Aura — Premium Web Development Agency</title>
+<meta name="description" content="Pixel Aura helps startups, businesses and creators build beautiful, fast and modern websites. Portfolio sites, business sites, landing pages and e-commerce, built with premium design and clean code.">
+<meta name="keywords" content="web development agency, website design, portfolio website, landing page, business website, e-commerce website, Pixel Aura">
+<meta name="author" content="Pixel Aura">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Pixel Aura — Turning Ideas Into Powerful Digital Experiences">
+<meta property="og:description" content="Premium web development agency building modern, fast, responsive websites.">
+<meta property="og:type" content="website">
+
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     LOADING SCREEN
+============================================================ -->
+<div id="loadingScreen" aria-hidden="true">
+  <div class="loader-content">
+    <!-- Neon Logo in Loader -->
+    <div class="logo-wrapper loader-logo-img">
+        <div class="neon-ring"></div>
+     <img src="images/logo.png" width="200">
+    </div>
+    <div class="loader-logo">PIXEL<span>AURA</span></div>
+    <div class="loader-bar"><span id="loaderFill"></span></div>
+    <div class="loader-percent" id="loaderPercent">0%</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     SCROLL PROGRESS BAR
+============================================================ -->
+<div id="scrollProgressBar"></div>
+
+<!-- ============================================================
+     CURSOR GLOW
+============================================================ -->
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ============================================================
+     ANIMATED PARTICLE BACKGROUND
+============================================================ -->
+<canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<header id="navbar" class="navbar">
+  <div class="nav-container">
+    <a href="#home" class="logo">
+      <!-- NEON LOGO ADDED HERE -->
+      <div class="logo-wrapper">
+        <div class="neon-ring"></div>
+        <img src="images/logo.png" alt="Pixel Aura" class="brand-logo-img">
+      </div>
+      PIXEL<span>AURA</span>
+    </a>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="#home" class="nav-link active" data-section="home">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#services" class="nav-link" data-section="services">Services</a>
+      <a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a>
+      <a href="#process" class="nav-link" data-section="process">Process</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn btn-neon nav-hire ripple">Hire Us</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     HERO SECTION
+============================================================ -->
+<section id="home" class="hero">
+  <div class="floating-shape shape-1" data-parallax="20"></div>
+  <div class="floating-shape shape-2" data-parallax="35"></div>
+  <div class="floating-shape shape-3" data-parallax="15"></div>
+  <div class="floating-shape shape-4" data-parallax="28"></div>
+  <div class="hero-grid-overlay"></div>
+
+  <div class="container hero-inner">
+    <p class="eyebrow fade-up"><span class="pulse-dot"></span> Cyberpunk-grade web development</p>
+
+    <h1 class="hero-title fade-up">
+      Turning Ideas Into <br>
+      <span class="gradient-text">Powerful Digital Experiences</span>
+    </h1>
+
+    <p class="hero-subtitle fade-up">Pixel Aura helps startups, businesses and creators build beautiful, fast and modern websites.</p>
+
+    <p class="hero-typing fade-up">
+      <span>We build&nbsp;</span><span id="typingText" class="typing-text"></span><span class="typing-cursor">|</span>
+    </p>
+
+    <div class="hero-actions fade-up">
+      <a href="#contact" class="btn btn-neon ripple">Hire Us</a>
+      <a href="#portfolio" class="btn btn-outline ripple">View Projects</a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" id="scrollIndicator">
+    <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+    <small>Scroll</small>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT SECTION
+============================================================ -->
+<section id="about" class="section">
+  <div class="container about-layout">
+    <div class="about-visual fade-up">
+      <div class="glass-card about-orb-card">
+        <div class="about-orb"></div>
+        <div class="orbit o1"><span>◆</span></div>
+        <div class="orbit o2"><span>◇</span></div>
+        <div class="orbit o3"><span>◈</span></div>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <p class="eyebrow fade-up"><span class="pulse-dot"></span> About Pixel Aura</p>
+      <h2 class="section-title fade-up">We design and build <span class="gradient-text">digital experiences</span> that convert</h2>
+      <p class="about-text fade-up">Pixel Aura is a premium web development studio crafting fast, modern and responsive websites for startups, businesses and creators around the world.</p>
+
+      <div class="about-list">
+        <div class="about-item fade-up"><span class="check">✓</span> Portfolio Websites</div>
+        <div class="about-item fade-up"><span class="check">✓</span> Business Websites</div>
+        <div class="about-item fade-up"><span class="check">✓</span> Landing Pages</div>
+        <div class="about-item fade-up"><span class="check">✓</span> E-commerce Websites</div>
+        <div class="about-item fade-up"><span class="check">✓</span> Custom Websites</div>
+        <div class="about-item fade-up"><span class="check">✓</span> Responsive UI</div>
+        <div class="about-item fade-up"><span class="check">✓</span> Modern Designs</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES SECTION
+============================================================ -->
+<section id="services" class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow center fade-up"><span class="pulse-dot"></span> What We Offer</p>
+      <h2 class="section-title center fade-up">Services built for <span class="gradient-text">real growth</span></h2>
+    </div>
+    <div class="services-grid" id="servicesGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PORTFOLIO SECTION
+============================================================ -->
+<section id="portfolio" class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow center fade-up"><span class="pulse-dot"></span> Our Work</p>
+      <h2 class="section-title center fade-up">Projects that <span class="gradient-text">speak for themselves</span></h2>
+    </div>
+    <div class="portfolio-grid" id="portfolioGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROCESS SECTION
+============================================================ -->
+<section id="process" class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow center fade-up"><span class="pulse-dot"></span> How We Work</p>
+      <h2 class="section-title center fade-up">A simple, transparent <span class="gradient-text">process</span></h2>
+    </div>
+    <div class="process-grid" id="processGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY CHOOSE US SECTION
+============================================================ -->
+<section id="why-us" class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow center fade-up"><span class="pulse-dot"></span> Why Pixel Aura</p>
+      <h2 class="section-title center fade-up">Why clients <span class="gradient-text">choose us</span></h2>
+    </div>
+    <div class="why-grid" id="whyGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     STATISTICS SECTION
+============================================================ -->
+<section id="stats" class="section section-alt stats-section">
+  <div class="container stats-grid">
+    <div class="stat-card fade-up">
+      <div class="stat-num" data-target="50" data-suffix="+">0</div>
+      <div class="stat-label">Projects Completed</div>
+    </div>
+    <div class="stat-card fade-up">
+      <div class="stat-num" data-target="30" data-suffix="+">0</div>
+      <div class="stat-label">Happy Clients</div>
+    </div>
+    <div class="stat-card fade-up">
+      <div class="stat-num" data-target="3" data-suffix="+">0</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-card fade-up">
+      <div class="stat-num" data-target="100" data-suffix="%">0</div>
+      <div class="stat-label">Client Satisfaction</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT SECTION
+============================================================ -->
+<section id="contact" class="section contact-section">
+  <div class="floating-shape shape-5" data-parallax="18"></div>
+  <div class="container contact-layout">
+    <div class="contact-info fade-up">
+      <p class="eyebrow"><span class="pulse-dot"></span> Get In Touch</p>
+      <h2 class="section-title">Let's build your <span class="gradient-text">next website</span></h2>
+      <p class="contact-text">Have a project in mind? Send us the details and we'll get back to you shortly.</p>
+      <a class="contact-email" href="mailto:aurapixeltech@gmail.com">✉ aurapixeltech@gmail.com</a>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/1D3h2Nsoxw/" target="_blank" class="social-icon">FB</a>
+        <a href="https://www.instagram.com/pixelaura113?igsh=MWd6dzlxNjJscTdxdA==" target="_blank" class="social-icon">IG</a>
+      </div>
+    </div>
+
+    <form class="glass-card contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+            <div class="field">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required maxlength="100" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required maxlength="150" autocomplete="email">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" maxlength="30" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="projectType">Project Type</label>
+              <select id="projectType" name="projectType">
+                <option value="">Select a type</option>
+                <option value="Portfolio Website">Portfolio Website</option>
+                <option value="Business Website">Business Website</option>
+                <option value="Landing Page">Landing Page</option>
+                <option value="E-commerce Website">E-commerce Website</option>
+                <option value="Custom Website">Custom Website</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="field">
+              <label for="budget">Budget</label>
+              <select id="budget" name="budget">
+                <option value="">Select a range</option>
+                <option value="Under $500">Under $500</option>
+                <option value="$500 - $1,000">$500 - $1,000</option>
+                <option value="$1,000 - $3,000">$1,000 - $3,000</option>
+                <option value="$3,000 - $10,000">$3,000 - $10,000</option>
+                <option value="$10,000+">$10,000+</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" maxlength="150">
+            </div>
+        </div>
+
+        <div class="field">
+          <label for="details">Project Description *</label>
+          <textarea id="details" name="details" rows="5" required maxlength="5000"></textarea>
+        </div>
+
+        <!-- Honeypot field: hidden from real users via CSS, bots tend to fill every field -->
+        <div class="field field-honeypot" aria-hidden="true">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button type="submit" class="btn btn-neon btn-block ripple" id="submitBtn">
+          <span id="submitBtnText">Submit Project</span>
+        </button>
+
+        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="#home" class="logo">
+      <div class="logo-wrapper">
+        <div class="neon-ring"></div>
+        <img src="images/logo.png" alt="Pixel Aura" class="brand-logo-img">
+      </div>
+      PIXEL<span>AURA</span>
+    </a>
+    <nav class="footer-nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">© 2026 Pixel Aura | All Rights Reserved.</div>
+</footer>
+
+<button id="backToTop">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

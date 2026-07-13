@@ -1,0 +1,15 @@
+{
+  "name": "pixel-aura-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pixel Aura marketing site with a Vercel Serverless Function backend for the contact form.",
+  "engines": {
+    "node": ">=18.x"
+  },
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}
